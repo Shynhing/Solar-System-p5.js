@@ -4,7 +4,8 @@ const scaleUa=15;
 const ua=149597870;
 var planetList=[];
 function setup() {
-  createCanvas(1000, 1000);
+  var canvas=createCanvas(windowWidth, windowHeight);
+  canvas.parent('tab1');
   sun=new astre("Sun",1.98*10**30,createVector(0,0),createVector(0,0));
   mercure=new astre("Mercure",3.30*10**23,createVector(0,57909050),createVector(0,0));
   venus=new astre("Venus",4.86*10**24,createVector(0,108209500),createVector(0,0));
@@ -78,4 +79,3 @@ function astre(name,mass,pos,vel){
     this.vel.y+=f.y/this.mass;
   }
 }
-
